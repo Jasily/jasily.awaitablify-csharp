@@ -20,5 +20,17 @@ await awaitablifier.Awaitablify(1).HasResult<int>(); // 1
 await awaitablifier.Awaitablify(Task.Run(() => 1)).HasResult<int>(); // 1
 
 var deepTask = Task.Run<Task<Task<string>>>(() => Task.Run<Task<string>>(() => Task.Run(() => "xyz")));
-await awaitablifier.UnpackAsync(task); // "xyz"
+await awaitablifier.UnpackAsync(deepTask); // "xyz"
+```
+
+For more usage, read
+[unittest](https://github.com/Jasily/jasily.awaitablify-csharp/blob/master/Jasily.Awaitablify.Test/UnitTest1.cs)
+.
+
+## Install
+
+**From Nuget**
+
+``` power-shell
+Install-Package Jasily.Awaitablify
 ```
