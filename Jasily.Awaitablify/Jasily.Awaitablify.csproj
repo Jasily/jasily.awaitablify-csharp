@@ -8,6 +8,10 @@
     <DocumentationFile>bin\Debug\netstandard2.0\Jasily.Awaitablify.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\Jasily.Awaitablify.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Jasily.FunctionInvoker" Version="0.1.0.1" />
     <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
